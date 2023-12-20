@@ -6,25 +6,27 @@
     <title>OCR Result</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
-    <h1>OCR Result</h1>
-    <pre>{{text_ocr}}</pre>
+<body>
+    <main>
+        <h1>OCR Result</h1>
+        <pre>{{text_ocr}}</pre>
+        
+        <h1>Photo Comparison</h1>
+        
+        <div class="result-box {% if is_same_person %}same-person-box{% else %}different-person-box{% endif %}">
+            {% if is_same_person %}
+            <p class="same-person">The image belongs to the same person.</p>
+            <p class="same-person">Accuracy Score: <span class="accuracy-score">{{ accuracy_score }} %</span></p>
+            {% else %}
+            <p class="different-person">The image belongs to a different person.</p>
+            {% endif %}
+        </div>
+        
+        <button onclick="window.location.href='{{ url_for('index') }}'" id="back-button">Back to Home</button>
+    </main>
 
-    <h1>Image Comparison</h1>
-
-    <div class="result-box {% if is_same_person %}same-person-box{% else %}different-person-box{% endif %}">
-        {% if is_same_person %}
-        <p class="same-person">The image belongs to the same person.</p>
-        <p class="same-person">Accuracy Score: <span class="accuracy-score">{{ accuracy_score }}</span></p>
-        {% else %}
-        <p class="different-person">The image belongs to a different person.</p>
-        {% endif %}
-    </div>
-
-    <button onclick="window.location.href='{{ url_for('index') }}'">Back to Home</button>
+    <footer>
+        <p>Created by Aravind</p>
+    </footer>
 </body>
-
-<footer>
-    <p>Created by Aravind</p>
-</footer>
-
 </html>

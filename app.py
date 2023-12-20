@@ -64,6 +64,8 @@ def upload():
 
     # Compute accuracy score (smaller distance values indicate a closer match)
     accuracy_score = 1 - face_distances[0]
+    
+    accuracy_score = round(accuracy_score*100,2)
 
     return render_template('result.html', text_ocr=text_ocr, is_same_person=is_same_person, accuracy_score=accuracy_score)
 

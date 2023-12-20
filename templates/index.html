@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Upload Image for OCR</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="ocrFile">Upload File for OCR: </label>
-        <input type="file" name="ocrFile" id="ocrFile" title="Upload the Aadhar" accept="image/*" required>
-        <br>
-        <label for="referenceFile">Sample Image for Comparison:</label>
-        <input type="file" name="referenceFile" id="referenceFile" title="Upload your photo" accept="image/*" required>
-        <button type="submit">Upload</button>
-    </form>
+    <main>
+        <h1>Upload Image for OCR</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="ocrFile">Upload File for OCR: </label>
+            <input type="file" name="ocrFile" id="ocrFile" title="Upload the Aadhar" accept="image/*" required>
+            <br>
+            <label for="referenceFile">Sample Photo for Comparison:</label>
+            <input type="file" name="referenceFile" id="referenceFile" title="Upload your photo" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Created by Aravind</p>
+    </footer>
 </body>
-
-<footer>
-    <p>Created by Aravind</p>
-</footer>
-
 </html>             

@@ -13,9 +13,14 @@ button {
     text-align: center;
 }
 
-body {
+body,html {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -136,12 +141,14 @@ form {
     /* Blue color for the accuracy score */
 }
 
+#back-button{
+    margin-bottom: 10px;
+}
+
 footer {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-top: auto;
+    /* Push the footer to the bottom */
     text-align: center;
-    position: fixed;
-    bottom: 5px;
-    width: 100%;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
-    /* Optional: Add a subtle shadow */
 }
