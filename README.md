@@ -1,4 +1,7 @@
 # OCR-App
+
+make changes here
+new version of the app is available
 A simple image to text conversion application using OCR.
 
 I've used Google's open-source library - pytesseract for OCR and python-Flask framework for server side scripting.
