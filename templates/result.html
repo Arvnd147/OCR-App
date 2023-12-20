@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCR Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
     <h1>OCR Result</h1>
-    <pre>{{text}}</pre>
+    <pre>{{text_ocr}}</pre>
+
+    <h1>Image Comparison</h1>
+
+    <div class="result-box {% if is_same_person %}same-person-box{% else %}different-person-box{% endif %}">
+        {% if is_same_person %}
+        <p class="same-person">The image belongs to the same person.</p>
+        <p class="same-person">Accuracy Score: <span class="accuracy-score">{{ accuracy_score }}</span></p>
+        {% else %}
+        <p class="different-person">The image belongs to a different person.</p>
+        {% endif %}
+    </div>
+
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back to Home</button>
 </body>
+
+<footer>
+    <p>Created by Aravind</p>
+</footer>
+
 </html>

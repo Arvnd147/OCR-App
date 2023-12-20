@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCR Web App</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Upload Image for OCR</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Input Image: </label>
-        <input type="file" name="file" title="Upload the file" accept="image/*" required>
+        <label for="ocrFile">Upload File for OCR: </label>
+        <input type="file" name="ocrFile" id="ocrFile" title="Upload the Aadhar" accept="image/*" required>
         <br>
+        <label for="referenceFile">Sample Image for Comparison:</label>
+        <input type="file" name="referenceFile" id="referenceFile" title="Upload your photo" accept="image/*" required>
         <button type="submit">Upload</button>
     </form>
 </body>
+
+<footer>
+    <p>Created by Aravind</p>
+</footer>
+
 </html>             
