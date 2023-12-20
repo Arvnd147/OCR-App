@@ -1,0 +1,147 @@
+/* Reset some default styles */
+body,
+h1,
+p,
+pre,
+form,
+label,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+pre {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow: auto;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.same-person {
+    color: #4CAF50;
+}
+
+.different-person {
+    color: #FF5733;
+}
+
+/* Form styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Add some animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply animation to specific elements */
+h1,
+pre,
+p,
+form {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Box styling for comparison results */
+.result-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.same-person-box {
+    background-color: #DFF0D8;
+    /* Light green for "Same Person" */
+}
+
+.different-person-box {
+    background-color: #F2DEDE;
+    /* Light red for "Different Person" */
+}
+
+/* Highlight the accuracy score */
+.accuracy-score {
+    font-weight: bold;
+    color: #3498db;
+    /* Blue color for the accuracy score */
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle shadow */
+}
